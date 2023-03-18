@@ -1,14 +1,38 @@
 <?php
-include_once "db_conn.php";
+
+//this query will also delete the item_id in the 'products' as well from its foreign key 'orders'.
+// get the item_id from the query string
+$item_id = $_GET["item_id"];
 
 
-$sql = "DELETE FROM products WHERE item_id='" . $_GET["item_id"] . "'";
-if (mysqli_query($conn, $sql)) {
+$dbname = "midterm";
+$dbusername = "root";
+$dbpassword = "";
+$pdo = new PDO("mysql:host=localhost;dbname=$dbname", $dbusername, $dbpassword);
 
-    header ("location: index.php");
-} else {
-    echo "Error deleting record: " . mysqli_error($conn);
+
+$pdo->beginTransaction();
+
+try {
+
+  $sql = "DELETE FROM orders WHERE item_id = ?";
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute([$item_id]);
+  $sql = "DELETE FROM products WHERE item_id = ?";
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute([$item_id]);
+
+  $pdo->commit();
+
+
+ header ("location: index.php");
+} catch (PDOException $e) {
+  $pdo->rollBack();
+
+  echo "Error deleting product: " . $e->getMessage();
 }
 
-mysqli_close($conn);
+$stmt = null;
+$pdo = null;
+
 ?>
