@@ -5,7 +5,7 @@
 $item_id = $_GET["item_id"];
 
 
-$dbname = "midterm";
+$dbname = "midterms";
 $dbusername = "root";
 $dbpassword = "";
 $pdo = new PDO("mysql:host=localhost;dbname=$dbname", $dbusername, $dbpassword);
