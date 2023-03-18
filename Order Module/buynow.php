@@ -62,28 +62,6 @@
                         <a href="shop.php" class="btn btn-secondary me-3">Cancel Order</a>
                         <button type="submit" name="submit_order" class="btn btn-primary">Submit Order</button>
                     </div>
-            
-                <!-- <div class="form-floating">
-                    <label for="username">Username</label>
-                    <input type="text" class="form-control" name="username" id="username" required>
-                </div>
-                <div class="form-floating">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" name="password" id="password" required>
-                </div>
-                <div class="form-floating">
-                    <label for="fullname">Full Name</label>
-                    <input type="text" class="form-control" name="fullname" id="fullname" required>
-                </div>
-                <div class="form-floating">
-                    <label for="contact_number">Contact Number</label>
-                    <input type="text" class="form-control" name="contact_number" id="contact_number" required>
-                </div>
-                <div class="form-floating">
-                    <label for="address">Address</label>
-                    <textarea class="form-control" name="address" id="address" required></textarea>
-                </div>
-                <button type="submit" name="submit_order" class="btn btn-primary">Submit Order</button> -->
                 </form>
             </div>
         </div>
