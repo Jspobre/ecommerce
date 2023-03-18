@@ -1,13 +1,9 @@
-
 <?php
-//error_reporting (0);
-
 if(isset($_GET['item_id'])){
     $n_item_id= $_GET['item_id'];
     $n_itemname= $_GET['item_name'];
     $n_itemprice= $_GET['item_price'];
 }
-
 ?>
 <html>
 <head>
@@ -15,9 +11,7 @@ if(isset($_GET['item_id'])){
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
-
-<body>
-    
+<body>  
  <div class="container">
     <div class="row">
         <div class="col-3"></div>
