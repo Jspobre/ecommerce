@@ -2,7 +2,7 @@
 $servername="localhost";
 $dbusername="root";
 $dbpassword="";
-$dbname="midterm";
+$dbname="midterms";
 
 $conn = mysqli_connect($servername,$dbusername,$dbpassword,$dbname);
 
@@ -13,4 +13,6 @@ if (!$conn){
 session_start();
 include_once ("sql_utilities.php");
 ?>
+
+
 
