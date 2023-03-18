@@ -2,11 +2,11 @@
 $servername="localhost";
 $dbusername="root";
 $dbpassword="";
-$dbname="ecommerce";
+$dbname="midterm";
 
 $conn = mysqli_connect($servername,$dbusername,$dbpassword,$dbname);
 
-// Check connection
+
 if (!$conn){
     die("Maintenance Mode.");
 }
