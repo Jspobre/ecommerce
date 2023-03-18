@@ -41,8 +41,7 @@
             <div class="col-8">
                <h1>Update Record</h1>
       
-                <?php
-      
+                <?php     
                   $productlist = (mysqli_query($conn, "select item_id, item_name, item_price from products where item_status='A'"));
                        if(isset($_GET['update_status'])){
                             switch($_GET['update_status']){
@@ -67,14 +66,14 @@
          echo "<td> <a class='btn btn-danger' href='delete_item.php?item_id=". $row['item_id'] ." ' > Delete </a> </td>";
          echo "</tr>";
          }
-          echo "</table>";
-          
+          echo "</table>";    
                  ?>
-                
-            </div>
-             <div class="col-1"></div> 
+  
+        </div>       
+            <div style="text-align:center" class="col-8">
+               <h2>Order Now!</h2>
+               <a href="order_module/shop.php" class="btn btn-info me-3" class="text-center">Purchase</a>
         </div>
-    </div>
 </body>
 <script src="js/bootstrap.js"></script>
 </html>
